@@ -1,0 +1,42 @@
+# ── Secrets ───────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Python ────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ── Virtual env ───────────────────────────────────────────────────────
+venv
+venv/
+.venv/
+env/
+
+# ── Generated runtime artifacts ───────────────────────────────────────
+# analytics.db is recreated by `python data/seed_database.py`
+data/analytics.db
+# reports/ is populated by agents at runtime
+reports/*
+!reports/.gitkeep
+
+# ── OS / editor junk ──────────────────────────────────────────────────
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Logs ──────────────────────────────────────────────────────────────
+*.log
+logs/*
+!logs/.gitkeep
+
+# ── Eval artifacts (regenerated on every run) ─────────────────────────
+evals/report.md

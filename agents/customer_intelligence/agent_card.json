@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "name": "customer-intelligence-agent",
+  "display_name": "Customer Intelligence Agent",
+  "description": "Customer behaviour specialist. Analyses customer data to identify churn risk, calculate lifetime value, segment customers, and generate customer intelligence reports. Use this agent when the question involves customer retention, churn risk, customer segmentation, lifetime value, or customer health.",
+  "version": "1.0.0",
+  "url": "http://127.0.0.1:9002",
+  "capabilities": {
+    "accepts": [
+      "churn risk analysis",
+      "customer segmentation",
+      "lifetime value calculation",
+      "customer health",
+      "retention analysis"
+    ],
+    "returns": [
+      "risk scores",
+      "customer segments",
+      "lifetime values",
+      "intelligence reports"
+    ],
+    "input_format": {
+      "type": "text",
+      "field": "question"
+    },
+    "output_format": {
+      "type": "text",
+      "field": "answer"
+    }
+  },
+  "mcp_servers": ["database", "scoring", "report"],
+  "transport": {
+    "protocol": "http",
+    "task_endpoint": "/tasks",
+    "card_endpoint": "/.well-known/agent.json"
+  },
+  "status": "active"
+}

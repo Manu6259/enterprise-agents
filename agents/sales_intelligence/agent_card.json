@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "name": "sales-intelligence-agent",
+  "display_name": "Sales Intelligence Agent",
+  "description": "Sales action specialist. Turns customer risk findings into specific action plans with product recommendations, sales rep assignments, and personalised outreach strategies. Use this agent when you need to know what to do about at-risk customers, who should contact them, and what to offer.",
+  "version": "1.0.0",
+  "url": "http://127.0.0.1:9003",
+  "capabilities": {
+    "accepts": [
+      "sales action planning",
+      "rep assignment",
+      "product recommendations",
+      "retention planning",
+      "outreach strategy"
+    ],
+    "returns": [
+      "action plans",
+      "rep assignments",
+      "product recommendations",
+      "retention briefs"
+    ],
+    "input_format": {
+      "type": "text",
+      "field": "question"
+    },
+    "output_format": {
+      "type": "text",
+      "field": "answer"
+    }
+  },
+  "mcp_servers": ["database", "scoring", "recommendation", "outreach"],
+  "transport": {
+    "protocol": "http",
+    "task_endpoint": "/tasks",
+    "card_endpoint": "/.well-known/agent.json"
+  },
+  "status": "active"
+}

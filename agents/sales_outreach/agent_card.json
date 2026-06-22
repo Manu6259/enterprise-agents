@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "name": "sales-outreach-agent",
+  "display_name": "Sales Outreach Agent",
+  "description": "WRITE-side specialist for the human-in-the-loop outreach pipeline. Persists an action plan produced upstream by the sales-intelligence-agent into the pending approval queue. Does NOT generate plans, NOT send messages, NOT approve drafts. A manager review is always required before any draft leaves the queue. Use only when the user explicitly wants to act on a customer (e.g. 'submit', 'prepare outreach', 'queue for sending').",
+  "version": "1.0.0",
+  "url": "http://127.0.0.1:9004",
+  "capabilities": {
+    "accepts": [
+      "outreach drafting",
+      "action plan persistence",
+      "HITL queue submission"
+    ],
+    "returns": [
+      "draft_id",
+      "pending-approval confirmation"
+    ],
+    "input_format": {
+      "type": "text",
+      "field": "question"
+    },
+    "output_format": {
+      "type": "text",
+      "field": "answer"
+    }
+  },
+  "mcp_servers": ["outreach"],
+  "transport": {
+    "protocol": "http",
+    "task_endpoint": "/tasks",
+    "card_endpoint": "/.well-known/agent.json"
+  },
+  "status": "active"
+}

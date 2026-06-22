@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "name": "data-analysis-agent",
+  "display_name": "Data Analysis Agent",
+  "description": "General purpose data analyst. Answers broad business questions about sales, products, revenue, and operational performance by querying a SQL database and analysing files. Use this agent for overall business performance questions, sales trends, product analysis, and regional comparisons.",
+  "version": "1.0.0",
+  "url": "http://127.0.0.1:9001",
+  "capabilities": {
+    "accepts": [
+      "business performance questions",
+      "sales analysis",
+      "product queries",
+      "regional analysis",
+      "file analysis"
+    ],
+    "returns": [
+      "structured analysis",
+      "data summaries",
+      "written reports"
+    ],
+    "input_format": {
+      "type": "text",
+      "field": "question"
+    },
+    "output_format": {
+      "type": "text",
+      "field": "answer"
+    }
+  },
+  "mcp_servers": ["database", "file"],
+  "transport": {
+    "protocol": "http",
+    "task_endpoint": "/tasks",
+    "card_endpoint": "/.well-known/agent.json"
+  },
+  "status": "active"
+}

@@ -1,0 +1,15 @@
+langchain
+langchain-openai
+langchain-mcp-adapters
+langgraph
+mcp
+openai
+pydantic
+fastapi
+uvicorn
+httpx
+psycopg[binary]
+python-dotenv
+pyjwt
+traceloop-sdk
+pyyaml
