@@ -2,7 +2,7 @@
 
 **A working multi-agent system that turns customer data into reviewed, manager-approved sales actions — with enterprise access control built in from the start.**
 
-[See the 15-second demo →](README.md) · [Technical architecture →](ARCHITECTURE.md) · [Source code →](https://github.com/Manu6259/enterprise-agents)
+[See the 15-second demo →](https://github.com/Manu6259/enterprise-agents/blob/main/README.md) · [Technical architecture →](https://github.com/Manu6259/enterprise-agents/blob/main/ARCHITECTURE.md) · [Source code →](https://github.com/Manu6259/enterprise-agents)
 
 ---
 
@@ -36,4 +36,4 @@ This is a demonstration build, not a deployed product. Turning it into one is a 
 
 ---
 
-*Built by Manu Jain on LangGraph, MCP, Supabase, and Langfuse. The full architecture, security model, and trade-offs are documented in [ARCHITECTURE.md](ARCHITECTURE.md).*
+*Built by Manu Jain on LangGraph, MCP, Supabase, and Langfuse. The full architecture, security model, and trade-offs are documented in [ARCHITECTURE.md](https://github.com/Manu6259/enterprise-agents/blob/main/ARCHITECTURE.md).*
