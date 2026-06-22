@@ -22,7 +22,7 @@ The interesting parts aren't the agents themselves. They're:
 - **End-to-end observability.** Every run — routing decision, tool call, latency, token cost — is captured to Langfuse via OpenTelemetry.
 - **Declarative eval set.** YAML cases with assertions, run via `python evals/run.py`, written to a markdown report. Includes adversarial prompt-injection and role-escalation cases.
 
-Full design rationale, tradeoffs, and what was deliberately not built: see [ARCHITECTURE.md](./ARCHITECTURE.md).
+Full design rationale, tradeoffs, and what was deliberately not built: see [ARCHITECTURE.md](./ARCHITECTURE.md). For the plain-English business overview, see [CASE_STUDY.md](./CASE_STUDY.md).
 
 ---
 
