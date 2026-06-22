@@ -4,7 +4,9 @@
 
 > *"Analyze customer X — what's the risk and what's the play?"* → a structured action plan in under sixty seconds, with a human approval step before any outreach is sent.
 
-<!-- TODO: 15-second GIF of the RLS demo goes here -->
+![Live demo — the same question, scoped to who's asking](docs/demo.gif)
+
+*The same question — "Who is my highest churn-risk customer?" — asked by two different sales reps. Alice (North territory) and Bob (South territory) get completely different answers, because row-level security scopes each rep to their own customers at the database. The agent never sees data the caller isn't allowed to.*
 
 ---
 
@@ -115,6 +117,13 @@ Detailed setup notes and troubleshooting: [STARTUP.md](./STARTUP.md).
 
 ## See it in action
 
+**The web console** — the live UI in the GIF above. Pick an identity, ask a question, and watch the routing plan and agents run in real time (the stack must be up):
+
+```bash
+./venv/bin/python webui/app.py
+# → open http://127.0.0.1:8800
+```
+
 **The RLS demo** — the same question returns different data depending on who's asking:
 
 ```bash
@@ -180,11 +189,16 @@ enterprise-agents/
 │   ├── cases.yaml            # 10 declarative cases
 │   └── run.py                # In-process runner; writes report.md
 │
+├── webui/                    # Local web console (the demo GIF above)
+│   ├── app.py                # FastAPI; drives the in-process orchestrator, streams via SSE
+│   └── static/index.html     # Identity selector + live activity panel + answer pane
+│
 └── scripts/
     ├── stack.sh              # start | stop | status | restart
     ├── apply_rls.py
     ├── demo_rls.py           # Three RLS guarantees, demonstrated
-    └── review_drafts.py      # Manager approval CLI
+    ├── review_drafts.py      # Manager approval CLI
+    └── make_gif.sh           # Screen recording → optimized GIF
 ```
 
 ---
